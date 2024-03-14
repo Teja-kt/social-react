@@ -5,6 +5,7 @@
     justify-content: space-between;
     padding: 16px 16px;
     background-color: #4259dd;
+    color: white;
 }
 
 .navbar-left{
@@ -15,5 +16,4 @@
     flex-direction: row;
     justify-content: space-around;
     width: 60%;
-    /* align-items: flex-end; */
 }

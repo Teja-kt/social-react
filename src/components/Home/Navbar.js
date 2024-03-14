@@ -3,8 +3,12 @@ import { UserContext } from "../../context/userContext";
 import './navbar.css'
 
 const Navbar = () => {
-  const { user, logged, setLogged } = useContext(UserContext);
+  const { user, logged, setLogged, setUser } = useContext(UserContext);
 
+  const handleLogout = () => {
+    setLogged(!logged)
+    setUser("")
+  }
   return (
     <div className="navbar-container">
       <div className="navbar-left">
@@ -12,7 +16,8 @@ const Navbar = () => {
       </div>
       <div className="navbar-right">
         <p>Hi! {user.name}</p>
-        <button onClick={() => setLogged(!logged)}>Logout</button>
+        <button onClick={handleLogout}>Logout</button>
+        {/* {() => setLogged(!logged} */}
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Login from "./components/Users/Login";
 import { UserContext } from "./context/userContext";
 
 export default function App() {
-  const { logged } = useContext(UserContext);
+  const { logged, user } = useContext(UserContext);
   return (
     <>
       

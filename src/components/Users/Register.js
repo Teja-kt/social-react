@@ -1,9 +1,12 @@
 import React, {useContext} from "react";
 import { UserContext } from '../../context/userContext'
 import './register.css'
-const Register = () => {
+const Register = ({onUpdateData }) => {
     const {user, setUser, logged, setLogged, users, setUsers} = useContext(UserContext)
     console.log(user);
+    const handleClose = () => {
+      onUpdateData(0)
+    }
     const handleRegister = () => {
         setUsers((prev) => [...prev, user])
         console.log(users);
@@ -14,25 +17,26 @@ const Register = () => {
       <div className="Register-model">
         <div className="Register-model-content">
           <div className="Register-header">
+            <div className="register-close-div">
             <div className="Register-signup-title"><h3>Register</h3></div>
-            {/* onClick={() => setFlag(() => 0)} */}
-            <div className="close" onClick={()=>setLogged()}>
+            <div className="close" onClick={handleClose}>
               &times;
             </div>
+            </div>
+            
           </div>
-          <input type="text" onChange={(e) =>
+          <input type="text" placeholder="Name" onChange={(e) =>
                 setUser((prev) => ({ ...prev, name: e.target.value }))
               }></input>
           <br></br>
-          <input type="email" onChange={(e) =>
+          <input type="email" placeholder="Email" onChange={(e) =>
                 setUser((prev) => ({ ...prev, email: e.target.value }))
               }></input>
           <br></br>
-          <input type="password" onChange={(e) =>
+          <input type="password" placeholder="Password" onChange={(e) =>
                 setUser((prev) => ({ ...prev, password: e.target.value }))
               }></input>
           <br></br>
-          {/* onClick={() => setFlag((prevState) => 2)} */}
           <button className="register-button" onClick={handleRegister} >Register and Login</button>
         </div>
       </div>

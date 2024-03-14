@@ -5,17 +5,20 @@ import './login.css'
 
 const Login = () => {
     const {user, setUser, logged, setLogged, users} = useContext(UserContext)
-    const [register, setregister] = useState(false)
-    // const [verifyLogin, setVerifyLogin] = useState({email:"", password:""})
+    const [register, setregister] = useState(0)
+
+    const updateData = (newData) => {
+      setregister(newData);
+    };
+
     const handleLogin = () => {
-        // console.log(verifyLogin);
         const verifyUser = users.find((el)=>(el.email===user.email && el.password===user.password))
         if(verifyUser){
             setLogged(!logged)
         }
     }
     const handleCreateAcount = () => {
-        setregister(!register)
+        setregister(1)
     }
   return (
     <div className='login-home'>
@@ -34,7 +37,7 @@ const Login = () => {
         <button className='btns' onClick={handleCreateAcount}>Create Account</button>
         </div>
         
-        {register && <Register/>}
+        {register===1 && <Register onUpdateData={updateData}/>}
     </div>
   )
 }
