@@ -1,23 +1,22 @@
 import React, {useContext} from "react";
-import { UserContext } from '../context/userContext'
+import { UserContext } from '../../context/userContext'
+import './register.css'
 const Register = () => {
     const {user, setUser, logged, setLogged, users, setUsers} = useContext(UserContext)
     console.log(user);
     const handleRegister = () => {
         setUsers((prev) => [...prev, user])
         console.log(users);
-        // setUser('')
         setLogged(!logged)
-        // setUser('')
     }
   return (
     <div>
       <div className="Register-model">
         <div className="Register-model-content">
           <div className="Register-header">
-            <div className="Register-signup-title">Register</div>
+            <div className="Register-signup-title"><h3>Register</h3></div>
             {/* onClick={() => setFlag(() => 0)} */}
-            <div className="close">
+            <div className="close" onClick={()=>setLogged()}>
               &times;
             </div>
           </div>
@@ -34,7 +33,7 @@ const Register = () => {
               }></input>
           <br></br>
           {/* onClick={() => setFlag((prevState) => 2)} */}
-          <button onClick={handleRegister} >Register and Login</button>
+          <button className="register-button" onClick={handleRegister} >Register and Login</button>
         </div>
       </div>
     </div>
