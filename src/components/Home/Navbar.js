@@ -9,6 +9,10 @@ const Navbar = () => {
     setLogged(!logged)
     setUser("")
   }
+
+  const handleSearch = () => {
+
+  }
   return (
     <div className="navbar-container">
       <div className="navbar-left">
@@ -16,6 +20,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-right">
         <p>Hi! {user.name}</p>
+        <input className="nav-input" type="text" placeholder="search by user" onChange={handleSearch}/>
         <button onClick={handleLogout}>Logout</button>
         {/* {() => setLogged(!logged} */}
       </div>
