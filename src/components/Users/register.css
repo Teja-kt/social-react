@@ -44,3 +44,6 @@ h3 {
 .close{
   font-size: 26px;
 }
+.register-none{
+  display: none;
+}

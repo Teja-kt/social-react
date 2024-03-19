@@ -1,0 +1,30 @@
+.comments-container{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    transition: 0.5sec;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+}
+
+.hide{
+    display: none;
+}
+
+.comment-body{
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.rotate{
+    transform: rotate(270deg);
+}
+
+.normal{
+    display: block;
+}
