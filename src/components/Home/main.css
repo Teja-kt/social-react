@@ -1,5 +1,6 @@
 .page{
     display: flex;
+    flex-direction: row;
 }
 
 .sidebar{
@@ -12,10 +13,17 @@
 }
 
 .main-content{
-    margin-top: 10vh;
+    margin-top: 6vh;
     margin-left: 320px;
 }
 
 .post-container{
     padding: 10px 6px;
+}
+
+.sidebar-links{
+    text-decoration: none;
+    margin: 10px 10px;
+    width: 80px;
+    /* background-color: #b6e0e7; */
 }

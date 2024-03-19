@@ -2,16 +2,16 @@ import React, { useContext } from 'react'
 import { UserContext } from '../../context/userContext';
 import useFetch from '../useFetch';
 
-const Albums = () => {
+const Todos = () => {
   const { user} = useContext(UserContext);
   console.log(user);
-  const albumURL = `https://jsonplaceholder.typicode.com/albums/?userId=${user.name}`;
+  const todoURL = `https://jsonplaceholder.typicode.com/todos/?userId=${user.name}`;
   // const nameURL = `https://jsonplaceholder.typicode.com/users/?id=${props.id}`;
-  const [data] = useFetch(albumURL)
+  const [data] = useFetch(todoURL)
   return (
     <div>
       <div className='main-content'>
-            <h2>Albums</h2>
+            <h2>Todos</h2>
             {data && data.map((elem) => <div className='album-container' key={elem.id}>
                 <h3 className='album-title'>Title : {elem.title}</h3>
                 <hr/>
@@ -21,4 +21,4 @@ const Albums = () => {
   )
 }
 
-export default Albums
+export default Todos

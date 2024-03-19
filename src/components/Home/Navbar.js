@@ -7,8 +7,8 @@ const Navbar = () => {
   const { user, logged, setLogged, setUser } = useContext(UserContext);
 
   const handleLogout = () => {
-    setLogged(!logged)
     setUser("")
+    setLogged(!logged)
   }
 
   const handleSearch = () => {
@@ -23,7 +23,6 @@ const Navbar = () => {
         <p>Hi! {user.name}</p>
         <input className="nav-input" type="text" placeholder="search by user" onChange={handleSearch}/>
         <button className="nav-logout" onClick={handleLogout}>Logout</button>
-        {/* {() => setLogged(!logged} */}
       </div>
     </div>
   );
