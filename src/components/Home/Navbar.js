@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="navbar-right">
         <p>Hi! {user.name}</p>
         <input className="nav-input" type="text" placeholder="search by user" onChange={handleSearch}/>
-        <button className="nav-logout" onClick={handleLogout}>Logout</button>
+       <button className="nav-logout" onClick={handleLogout}>Logout</button>
       </div>
     </div>
   );

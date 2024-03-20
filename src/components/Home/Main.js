@@ -5,6 +5,7 @@ import useFetch from '../useFetch'
 import { UserContext } from '../../context/userContext';
 import Comments from './Comments';
 import { Link } from 'react-router-dom';
+import Posts from './Posts';
 
 const Main = (props) => {
     // const [data, setdata] = useState([]);
@@ -26,6 +27,7 @@ const Main = (props) => {
             <Link to='/profile'><p className='sidebar-links'>Profile</p></Link>
         </div>
         <div className='main-content'>
+            {/* <Posts/> */}
             {/* <h2>Posts </h2> */}
             {/* {data && data.map((elem) => <div className='post-container' key={elem.id}>
                 <h3 className='post-title'>Title : {elem.title}</h3>

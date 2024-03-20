@@ -1,0 +1,17 @@
+.rotate{
+    transform: rotate(270deg);
+}
+
+.normal{
+    display: block;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+}
+
+.hide{
+    display: none;
+}

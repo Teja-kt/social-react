@@ -3,13 +3,12 @@ import { UserContext } from '../../context/userContext'
 import './register.css'
 const Register = ({onUpdateData }) => {
     const {user, setUser, logged, setLogged, users, setUsers} = useContext(UserContext)
-    // console.log(user);
+
     const handleClose = () => {
       onUpdateData(0)
     }
     const handleRegister = () => {
         setUsers((prev) => [...prev, user])
-        // console.log(users);
         onUpdateData(0)
         // setUser("")
         setLogged(!logged)

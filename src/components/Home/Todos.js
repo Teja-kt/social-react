@@ -12,8 +12,10 @@ const Todos = () => {
     <div>
       <div className='main-content'>
             <h2>Todos</h2>
+            <br/>
             {data && data.map((elem) => <div className='album-container' key={elem.id}>
                 <h3 className='album-title'>Title : {elem.title}</h3>
+                <br/>
                 <hr/>
             </div>)}
         </div>

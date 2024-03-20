@@ -1,0 +1,21 @@
+.sidebar{
+    padding: 10px 10px;
+}
+
+.sidebar-links{
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar-icons{
+    padding-top: 4%;
+}
+
+.sidebar-text{
+    text-decoration: none;
+    color: black;
+}
