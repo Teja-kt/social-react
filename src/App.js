@@ -26,11 +26,9 @@ export default function App() {
         <Sidebar/>
         
           <Routes>
-            {/* <Home /> */}
             <Route index path="/feeds" element={<Feeds />} />
             <Route path="/posts" element={<Posts />} />
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/home" element={<Home />} /> */}
             <Route path="/todos" element={<Todos />} />
             <Route path="/album" element={<Albums />} />
             <Route path="/photos" element={<Photos />} />
