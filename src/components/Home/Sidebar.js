@@ -17,6 +17,7 @@ const Sidebar = () => {
             <Link to='/album' className='sidebar-text'><p className='sidebar-links'><p className='sidebar-text'>Albums</p> <p className='sidebar-icons'><BiSolidPhotoAlbum /></p> </p></Link>
             <Link to='/todos' className='sidebar-text'><p className='sidebar-links'><p className='sidebar-text'>Todos</p> <p className='sidebar-icons'><LuListTodo /></p></p></Link>
             <Link to='/profile' className='sidebar-text'><p className='sidebar-links'><p className='sidebar-text'>Profile</p> <p className='sidebar-icons'><CgProfile /></p></p></Link>
+            <Link to='/employee' className='sidebar-text'><p className='sidebar-links'><p className='sidebar-text'>Employees</p> <p className='sidebar-icons'><CgProfile /></p></p></Link>
         </div>
     </div>
   )

@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import Home from "./components/Home/Home";
+// import Home from "./components/Home/Home";
 import Login from "./components/Users/Login";
 import { UserContext } from "./context/userContext";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Main from "./components/Home/Main";
+// import Main from "./components/Home/Main";
 import Todos from "./components/Home/Todos";
 import Profile from "./components/Home/Profile";
 import Register from "./components/Users/Register";
@@ -13,18 +13,18 @@ import Navbar from "./components/Home/Navbar";
 import Sidebar from "./components/Home/Sidebar";
 import Feeds from "./components/Home/Feeds";
 import Photos from "./components/Home/Photos";
+import Employees from "./components/Home/Employees";
 
 export default function App() {
-  const { logged, user } = useContext(UserContext);
+  const { logged} = useContext(UserContext);
   return (
     <>
       {!logged ? (
         <Login />
       ) : (
         <BrowserRouter>
-        <Navbar/>
-        <Sidebar/>
-        
+          <Navbar />
+          <Sidebar />
           <Routes>
             <Route index path="/feeds" element={<Feeds />} />
             <Route path="/posts" element={<Posts />} />
@@ -33,6 +33,7 @@ export default function App() {
             <Route path="/album" element={<Albums />} />
             <Route path="/photos" element={<Photos />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/employee" element={<Employees />} />
             <Route path="/register" element={<Register />} />
           </Routes>
         </BrowserRouter>
